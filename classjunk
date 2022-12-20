@@ -1,0 +1,187 @@
+// import { timeStamp } from "console";
+
+// class University{
+// private uni_name:string
+// private uni_address:string
+// private uni_telephone:string
+// private uni_email
+
+// constructor( uni_name: string, uni_address: string, uni_telephone:string,uni_email:string) {
+//     this.uni_name = uni_name;
+//     this.uni_address = uni_address;
+//     this.uni_telephone=uni_telephone;
+//     this.uni_email=uni_email
+//   }
+
+// setuniName(name:string){
+//  this.uni_name=name
+// }
+// getuniName(){
+//  return this.uni_name
+// }
+// setuniaddress(address:string){
+//     this.uni_address=address
+// }
+    
+// getuniaddress(){
+//   return  this.uni_address
+// }
+// setunitelaphone(telephone:string){
+//  this.uni_telephone=telephone
+// }
+// getunitelephone(){
+//  return this.uni_telephone
+// }
+// setuniemail(email:string){
+//     this.uni_email=email
+// }
+    
+// getuniemail(){
+//   return  this.uni_email
+// }
+    
+// }
+
+// class Department{
+//     subject:string
+//     constructor(subject:string){
+//         this.subject=subject
+//     }
+//     setsubject(subject:string){
+//         this.subject=subject
+//     }
+//     getsubject(){
+//         return this.subject
+//     }
+// }
+
+// class Person{
+//     personName:string
+//     address:string
+//     telephone:string
+//     email:string
+//     constructor( name:string, address:string,telephone:string,email:string){
+//             this.personName=name
+//             this.address=address
+//             this.telephone=telephone
+//             this.email=email
+//         }
+        
+// setName(name:string){
+//     this.personName=name
+//    }
+//    getName(){
+//     return this.personName
+//    }
+//    setAddress(address:string){
+//        this.address=address
+//    }
+       
+//    getAddress(){
+//      return  this.address
+//    }
+//    setTelaphone(telephone:string){
+//     this.telephone=telephone
+//    }
+//    getTelephone(){
+//     return this.telephone
+//    }
+//    setEmail(email:string){
+//        this.email=email
+//    }
+       
+//    getEmail(){
+//      return  this.email
+//    }
+       
+// }
+//  class Student extends Person {
+//      studentId:string
+//         attendence:number
+//         subject:string
+//  constructor(studentId:string,attendence:number,subject:string){
+//     super( personName:string,address:string
+//         telephone:string
+//         email:string)
+//    this.studentId=studentId
+//    this.attendence=attendence
+//    this.subject=subject
+//  }
+//     }
+
+// // interface Person {
+// // name:string,
+// // address:string,
+// // telephone:string,
+// // email:string
+// // }
+
+
+// // interface Student extends Person {
+// //     studentId:string,
+// //     attendence:number,
+// //     subject:string
+// // }
+
+// // interface Teacher extends Person{
+// //    teacherId:string,
+// //    subject:string,
+// // }
+
+
+// // interface Department{
+// //     subject:string,
+// //     classTimings:[string],
+    
+// // }
+// // interface Degree extends Department{
+// //     degreeNames:string,
+// //     duration:string
+// // }
+
+// // class enterStudent implements Student{
+// //     name:string
+// //         address:string
+// //         telephone:string
+// //         email:string
+// //          studentId:string
+// //         attendence:number
+// //         subject:string
+// //     constructor(name:string,
+// //         address:string,
+// //         telephone:string,
+// //         email:string, studentId:string,
+// //         attendence:number,
+// //         subject:string){
+// //             this.name=name,
+// //             this.address=address,
+// //             this.telephone=telephone,
+// //             this.email=email,this.studentId=studentId,
+// //         this.attendence=attendence,
+// //     this.subject=subject        }
+
+// //     }
+
+
+// // class enterTeacher implements Teacher{
+// //     name:string
+// //         address:string
+// //         telephone:string
+// //         email:string
+// //          teacherId:string
+// //         subject:string
+// //     constructor(name:string,
+// //         address:string,
+// //         telephone:string,
+// //         email:string, 
+// //         teacherId:string,
+// //          subject:string){
+// //             this.name=name,
+// //             this.address=address,
+// //             this.telephone=telephone,
+// //             this.email=email,
+// //             this.teacherId=teacherId,
+// //     this.subject=subject        }
+
+// //     }
+

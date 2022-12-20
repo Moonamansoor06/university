@@ -46,14 +46,15 @@ class University {
 }
 
 class Department {
-  protected subjects: string;
-  constructor(subjects: string) {
-    this.subjects = subjects;
+  protected subject: string;
+  constructor(subject: string) {
+    this.subject = subject;
   }
 
 }
 class Courses extends Department {
   courseTitle: string;
+  sections:string
   subSections: string;
   timings: string;
   duration: string;
@@ -61,12 +62,14 @@ class Courses extends Department {
   constructor(
     subjects: string,
     courseTitle: string,
+    sections:string,
     subSections: string,
     timings: string,
     duration: string
   ) {
     super(subjects);
     this.courseTitle = courseTitle;
+    this.sections=sections
     this.subSections = subSections;
     this.timings = timings;
     this.duration = duration;
@@ -91,12 +94,38 @@ class Person {
     this.telephone = telephone;
     this.email = email;
   }
+  setpName(name: string) {
+    this.personName = name;
+  }
+  getpName() {
+    return this.personName;
+  }
+  setpaddress(address: string) {
+    this.address = address;
+  }
 
+  getpaddress() {
+    return this.address;
+  }
+  setptelephone(telephone: string) {
+    this.telephone = telephone;
+  }
+  getptelephone() {
+    return this.telephone;
+  }
+  setpemail(email: string) {
+    this.email = email;
+  }
+
+  getpemail() {
+    return this.email;
+  }
 
 }
 class Student extends Person {
   studentId: string;
-  attendence: number;
+   attendence: number;
+   courseTitle:string;
   subject: string;
 
   constructor(
@@ -106,18 +135,21 @@ class Student extends Person {
     email: string,
     studentId: string,
     attendence: number,
-    subject: string
+    subject: string,
+    courseTitle:string
   ) {
     super(personName, address, telephone, email);
     this.studentId = studentId;
     this.attendence = attendence;
     this.subject = subject;
+    this.courseTitle=courseTitle
   }
 
 }
 class Teacher extends Person {
   teacherId: string;
   subject: string;
+  sections:string;
   qualification: string;
   experience: string;
   attendence: number;
@@ -129,6 +161,7 @@ class Teacher extends Person {
     teacherId: string,
     attendence: number,
     subject: string,
+    sections:string,
     qualification: string,
     experience: string
   ) {
@@ -138,16 +171,17 @@ class Teacher extends Person {
     this.qualification = qualification;
     this.experience = experience;
     this.subject = subject;
+    this.sections=sections
   }
 
 
 }
 
 
-let student1:Student=new Student('ahmed','jauhar','34613450','abc@g.com','stu001',100,'bio')
-let student2:Student=new Student('aamir','jauharabad','34613350','efg@g.com','stu002',100,'bio')
-let teacher1=new Teacher('ali','gulshan','02145638','','T001',110,'physics','phd','4 years')
-let teacher2=new Teacher('aslam','gulshan-e-hadeed','0214563438','aaa@mail.com','T002',115,'bio','phd','15 years')
+let student1:Student=new Student('ahmed','jauhar','34613450','abc@g.com','stu001',100,'bio','bsc')
+let student2:Student=new Student('aamir','jauharabad','34613350','efg@g.com','stu002',100,'bio','msc')
+let teacher1=new Teacher('ali','gulshan','02145638','','T001',110,'physics','mr2','phd','4 years')
+let teacher2=new Teacher('aslam','gulshan-e-hadeed','0214563438','aaa@mail.com','T002',115,'bio','mr01','phd','15 years')
 
 class studentClass{
     students:Student[]
@@ -157,7 +191,7 @@ class studentClass{
 }
 let Studentlist=new studentClass
 Studentlist.setStu([student1,student2])
-console.log(Studentlist)
+console.log('student list ',Studentlist.students)
 
 class teacherClass{
     teachers:Teacher[]
@@ -170,7 +204,7 @@ teacherlist.setTeacher([teacher1,teacher2])
 console.log(teacherlist.teachers[0])
 
 
-let course1=new Courses('bio','bsc','morning','8am to 2pm','4years')
+let course1=new Courses('bio','bsc','morning','mr-1','8am to 2pm','4years')
 class courseClass{
     courses:Courses[]
     setCourse(courses:Courses[]){
@@ -183,3 +217,19 @@ console.log(teacherlist)
 
 let university=new University('LMS','lahore','1354664','lms@lms.edu.pk')
 console.log(university)
+
+function information(){
+    let user_input = question('enter student id ');
+    //console.log('checking fields',Studentlist.students[0])
+Studentlist.students.map((stu,i)=>{  
+    // 
+    if(stu.studentId===user_input)
+       {
+       console.log(`\n student name: ${stu.getpName()}\n address:${stu.getpaddress()} \n telephone: ${stu.getptelephone()} \n email:${stu.getpemail()} \n course: ${stu.courseTitle} \n attendence: ${stu.attendence} \n `)}
+ 
+})
+      
+    }
+
+information()
+
